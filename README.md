@@ -10,12 +10,12 @@ We evaluated the following models: _Mistral-7B_, _Video-LLaVA_, _PG-Video-LLaVA_
 For a better understanding of Bloom's Level we are providing the following table:
 | **Level**       | **Description**                                                                                  | **Example**                                                                                                  |
 |-----------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| Remembering     | Retrieving relevant knowledge from long-term memory.                                              | How big is an atom?                                                                                           |
-| Understanding   | Questions that are solved by constructing meanings from content.                                  | Why do some plankton migrate vertically?                                                                      |
-| Applying        | Answering using, for example, a specific procedure.                                               | If I double the area and take half of the fraction, do I get the same result?                                 |
-| Analyzing       | Content must be broken down into individual parts to understand the purpose.                      | Why did sea levels drop during the ice age?                                                                   |
-| Evaluating      | Evaluating information based on criteria.                                                        | Will all the cultures merge into one big culture, due to the fading genetic distinctions?                     |
-| Creating        | Putting information together to design a new structure.                                           | Can somebody please explain to me what marginal benefits are and give me some examples?                       |
+| Remember        | Retrieving relevant knowledge from long-term memory.                                              | How big is an atom?                                                                                           |
+| Understand      | Questions that are solved by constructing meanings from content.                                  | Why do some plankton migrate vertically?                                                                      |
+| Apply           | Answering using, for example, a specific procedure.                                               | If I double the area and take half of the fraction, do I get the same result?                                 |
+| Analyze         | Content must be broken down into individual parts to understand the purpose.                      | Why did sea levels drop during the ice age?                                                                   |
+| Evaluate        | Evaluating information based on criteria.                                                        | Will all the cultures merge into one big culture, due to the fading genetic distinctions?                     |
+| Create          | Putting information together to design a new structure.                                           | Can somebody please explain to me what marginal benefits are and give me some examples?                       |
 
 ## Data and Code
 Code and data will be made available at the start of the conference.

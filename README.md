@@ -27,8 +27,6 @@ For a better understanding of Bloom's Level we are providing the following table
 | Evaluate        | Evaluating information based on criteria.                                                        | Will all the cultures merge into one big culture, due to the fading genetic distinctions?                     |
 | Create          | Putting information together to design a new structure.                                           | Can somebody please explain to me what marginal benefits are and give me some examples?                       |
 
-## Data and Code
-Code and data will be made available at the start of the conference.
 ### Models
 
 The repository provides modified inference code for Vision-Language Models (VLMs) and Large Language Models (LLMs). To use these models, please refer to the `models/` directory, which contains the following:

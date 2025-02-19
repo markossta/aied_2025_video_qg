@@ -1,0 +1,5 @@
+torch
+whisper
+pandas
+pytube
+cv2

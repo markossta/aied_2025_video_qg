@@ -15,7 +15,7 @@ def load_files(path_list):
             
 
 def filter_teded(ignored_list):
-    teded_path = './learningQ/teded/crawled_data/videos'
+    teded_path = '/data/learningQ/teded/crawled_data/videos'
     information_paths= [f for f in listdir(teded_path) if isfile(join(teded_path, f))]
     complete_jsonl = {}
     amount_before = 0

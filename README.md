@@ -2,16 +2,19 @@
 This repository contains the manual evaluation results and code about the AIED'25 submission #4602 titled **"Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos"**.
 
 ## Repository Structure
-- `data/`: Contains datasets, including manually annotated evaluation data and processed LearningQ dataset.
+- `data/`: Contains datasets, including manually annotated evaluation data and LearningQ dataset.
+  - `learningQ/`: The original learningQ data (has to be downloaded and placed by the user).
+  - `learning_questions/`: Contains ground-truth question data (pre-processed).
+  - `learning_videos/`: Folder for storing the downloaded Khan Academy/ TED-ED videos
+  - `manual evaluation/`:  Contains the evaluation of the 6 videos (3x Khan Academy, 3x TED-ED) from both annotators and discussed version.
 - `src/`: Contains source code for data processing, models, and cod for processing evaluation.
   - `data_processing/`: Scripts for downloading, filtering, and preparing the LearningQ dataset.
   - `models/`: Code for the modified model inference.
-  - `evaluation/`: Code for manual and automatic evaluation of the generated questions.
+  - `evaluation/`: Code for processing manual and automatic evaluation of the generated questions.
   
 ## Manual Evaluation
-Since the detailed evaluation of the individual questions is very large, it is provided as excel files (`evaluation/`).
+Since the detailed evaluation of the individual questions is very large, it is provided as excel files (`data/manual_evaluation/`) for a deeper insight.
 The files are separated into Khan Academy and TED-ED. Furthermore, the annotation before the collaborative (**video_evaluation_annotator1_khan.csv, video_evaluation_annotator1_teded.csv, video_evaluation_annotato2_khan.csv, video_evaluation_annotator2_teded.csv**) and after it are shared (**collaborative_evaluation_teded.csv, collaborative_evaluation_khan.csv**).
-
 
 Each table includes the following details: video ID, video link (YouTube), model used, approach applied, prompt used, generated output, whether it is a question (yes/no), and our evaluation categories: _Relevance_ (yes/no), _Answerability_ (yes/no), and _Bloom's Taxonomy Level_ (Remembering, Understanding, Applying, Analyzing, Evaluating, Creating). _Bloom's Taxonomy Level_ is also referenced as _Levels of understanding_ in our submission.
 
@@ -27,9 +30,8 @@ For a better understanding of Bloom's Level we are providing the following table
 | Evaluate        | Evaluating information based on criteria.                                                        | Will all the cultures merge into one big culture, due to the fading genetic distinctions?                     |
 | Create          | Putting information together to design a new structure.                                           | Can somebody please explain to me what marginal benefits are and give me some examples?                       |
 
-### Models
+### Data and Code 
+This repository is structured into different sections, each focusing on a specific aspect of the project. The `data/` folder contains the data like the manual evaluation. The `src/` folder includes scripts for data processing, model inference, and evaluation.
 
-The repository provides modified inference code for Vision-Language Models (VLMs) and Large Language Models (LLMs). To use these models, please refer to the `models/` directory, which contains the following:
+For a detailed explanation of each section, please refer to the respective README.md files within the subdirectories. These documents provide further information.
 
-- **Inference code**: Modified scripts for running inference on VLMs and LLMs on our task (the code has to be placed inside the models specific code).
-- **Model links**: Pre-trained models are available through the respective repositories (e.g., Hugging Face, OpenAI).

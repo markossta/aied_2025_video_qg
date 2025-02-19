@@ -1,7 +1,9 @@
 # Additional Information for 2025 AIED - Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos
-This repository contains additional information about the AIED'25 submission #4602 titled **"Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos"**.
+This repository contains the manual evaluation results and code about the AIED'25 submission #4602 titled **"Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos"**.
 ## Manual Evaluation
-Since the detailed evaluation of the individual questions is very large, it is provided here as a excel files (evaluation folder).
+Since the detailed evaluation of the individual questions is very large, it is provided as excel files (`evaluation/`).
+The files are separated into Khan Academy and TED-ED. Furthermore, the annotation before the collaborative (**video_evaluation_annotator1_khan.csv, video_evaluation_annotator1_teded.csv, video_evaluation_annotato2_khan.csv, video_evaluation_annotator2_teded.csv**) and after it are shared (**collaborative_evaluation_teded.csv, collaborative_evaluation_khan.csv**).
+
 
 Each table includes the following details: video ID, video link (YouTube), model used, approach applied, prompt used, generated output, whether it is a question (yes/no), and our evaluation categories: _Relevance_ (yes/no), _Answerability_ (yes/no), and _Bloom's Taxonomy Level_ (Remembering, Understanding, Applying, Analyzing, Evaluating, Creating). _Bloom's Taxonomy Level_ is also referenced as _Levels of understanding_ in our submission.
 
@@ -19,3 +21,9 @@ For a better understanding of Bloom's Level we are providing the following table
 
 ## Data and Code
 Code and data will be made available at the start of the conference.
+### Models
+
+The repository provides modified inference code for Vision-Language Models (VLMs) and Large Language Models (LLMs). To use these models, please refer to the `models/` directory, which contains the following:
+
+- **Inference code**: Modified scripts for running inference on VLMs and LLMs on our task (the code has to be placed inside the models specific code).
+- **Model links**: Pre-trained models are available through the respective repositories (e.g., Hugging Face, OpenAI).

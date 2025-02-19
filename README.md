@@ -1,5 +1,13 @@
 #  AIED'25 Submission #4602 - Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos
 This repository contains the manual evaluation results and code about the AIED'25 submission #4602 titled **"Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos"**.
+
+## Repository Structure
+- `data/`: Contains datasets, including manually annotated evaluation data and processed LearningQ dataset.
+- `src/`: Contains source code for data processing, models, and cod for processing evaluation.
+  - `data_processing/`: Scripts for downloading, filtering, and preparing the LearningQ dataset.
+  - `models/`: Code for the modified model inference.
+  - `evaluation/`: Code for manual and automatic evaluation of the generated questions.
+  
 ## Manual Evaluation
 Since the detailed evaluation of the individual questions is very large, it is provided as excel files (`evaluation/`).
 The files are separated into Khan Academy and TED-ED. Furthermore, the annotation before the collaborative (**video_evaluation_annotator1_khan.csv, video_evaluation_annotator1_teded.csv, video_evaluation_annotato2_khan.csv, video_evaluation_annotator2_teded.csv**) and after it are shared (**collaborative_evaluation_teded.csv, collaborative_evaluation_khan.csv**).

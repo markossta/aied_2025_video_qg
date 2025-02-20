@@ -23,7 +23,7 @@ Since the models have different dependencies, it is recommended to use a  **Cond
 The installation instructions and required dependencies for each model can be found in their respective original GitHub repositories. Follow those guidelines to set up the correct environment before running inference or fine-tuning.
 
 ## Recommended Placement of Inference Code  
-For proper execution and optimal organization, here are the recommended locations for the inference code for each model:
+For proper execution and optimal organization, here are the recommended locations for the inference code for each model (can be used for zero-shot, fine-tuned, ablation study (some lines need to be commented/uncommented as in the code described):
 
 - **Video-LLaVA**: Place the inference code directly in the main directory of the original GitHub project.
 - **PG-Video-LLaVA**: Place the inference code in the `video_chatgpt`folder of the original GitHub project.

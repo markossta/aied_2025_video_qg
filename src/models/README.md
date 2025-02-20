@@ -5,6 +5,13 @@ This folder contains the modified inference code for the four models used in the
 ## Pre-Trained Models  
 To use the inference scripts, you need to download the pre-trained models from the respective GitHub repositories of the original authors. These models are required both for inference and, in the case of **PG-Video-LLaVA** and **Video-LLaMA**, for fine-tuning. 
 
+Github-Repositories:
+[Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA)
+[PG-Video-LLaVA](https://github.com/mbzuai-oryx/Video-LLaVA)
+[Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA)
+
+
+For Mistral-7B we used the [HugginFace version](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3)
 ## Fine-Tuning  
 Fine-tuning was conducted for **PG-Video-LLaVA** and **Video-LLaMA** using the pre-processed LearningQ dataset. The original training code from the respective repositories was used for this process.
 

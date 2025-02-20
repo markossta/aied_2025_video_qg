@@ -219,60 +219,6 @@ def merged_results(khan, question_forms_khan, teded, question_forms_teded, model
         json.dump(question_forms, questions_data)
 
 
-def evaluate_video_llava():
-    #khan = '/data/models_output/zero_shot_results_video_llava_khan_test.txt'
-    #teded = '/data/models_output/zero_shot_results_video_llava_teded_test.txt'
-    khan = '/data/models_output/zero_shot_seed_results_full_video_llava_khan_test.txt'
-    teded = '/data/models_output/zero_shot_seed_results_full_video_llava_teded_test.txt'
-
-    khan_json = json.load(open(khan, 'r'))
-    teded_json = json.load(open(teded, 'r'))
-    results_khan, question_forms_khan = count_question_statements_empty(khan_json)
-    results_teded, question_forms_teded = count_question_statements_empty(teded_json)
-    merged_results(results_khan, question_forms_khan, results_teded, question_forms_teded)
-
-
-def evaluate_pg_video_llava(model='zeroshot'):
-    khan = '/data/models_output/zeroshot_13b_results_pg_video_llava_khan_test_1234.txt'
-    teded = '/data/models_output/zeroshot_13b_results_pg_video_llava_teded_test_1234.txt'
-    if model == 'finetuned-7b':
-        khan = '/data/models_output/finetune_7b_results_pg_video_llava_khan_test.txt'
-        teded = '/data/models_output/finetune_7b_results_pg_video_llava_teded_test.txt'
-    elif model == 'finetuned-13b':
-        khan = '/data/models_output/finetune_all_13b_results_pg_video_llava_khan_test_1234.txt'
-        teded = '/data/models_output/finetune_all_13b_results_pg_video_llava_teded_test_1234.txt'
-    elif model == 'finetuned-13b-visual':
-        khan = '/data/models_output/finetune_no_transcript_all_13b_results_pg_video_llava_khan_test_1234.txt'
-        teded = '/data/models_output/finetune_no_transcript_all_13b_results_pg_video_llava_teded_test_1234.txt'
-    elif model == 'finetuned-13b-audio':
-        khan = '/data/models_output/finetune_no_frame_all_13b_results_pg_video_llava_khan_test_1234.txt' 
-        teded = '/data/models_output/finetune_no_frame_all_13b_results_pg_video_llava_teded_test_1234.txt'
-    khan_json = json.load(open(khan, 'r'))
-    teded_json = json.load(open(teded, 'r'))
-    results_khan, question_forms_khan = count_question_statements_empty(khan_json)
-    results_teded, question_forms_teded = count_question_statements_empty(teded_json)
-    merged_results(results_khan, question_forms_khan, results_teded, question_forms_teded)
-
-
-def evaluate_video_llama(model='zeroshot'):
-    khan = '/data/models_output/zero_shot_results_video_llama_khan_test.txt'
-    teded = '/data/models_output/zero_shot_results_video_llama_teded_test.txt'
-    if model == 'finetuned':
-        khan = '/data/models_output/finetune_new_results_seed_video_llama_13B_khan_test.txt'
-        teded = '/data/models_output/finetune_new_results_seed_video_llama_13B_teded_test.txt'
-    elif model == 'finetuned-visual':
-        khan = '/data/models_output/finetune_no_audio_results_seed_video_llama_13B_khan_test.txt'
-        teded = '/data/models_output/finetune_no_audio_results_seed_video_llama_13B_teded_test.txt'
-    elif model == 'finetuned-audio':
-        khan = '/data/models_output/finetune_no_frames_results_seed_video_llama_13B_khan_test.txt'
-        teded = '/data/models_output/finetune_no_frames_results_seed_video_llama_13B_teded_test.txt'
-    khan_json = json.load(open(khan, 'r'))
-    teded_json = json.load(open(teded, 'r'))
-    results_khan, question_forms_khan = count_question_statements_empty(khan_json)
-    results_teded, question_forms_teded = count_question_statements_empty(teded_json)
-    merged_results(results_khan, question_forms_khan, results_teded, question_forms_teded)
-
-
 def evaluate_video_llava2():
     khan = '/data/models_output/patched_zero_shot_seed_results_full_video_llava_khan_test.txt'
     teded = '/data/models_output/patched_zero_shot_seed_results_full_video_llava_teded_test.txt'

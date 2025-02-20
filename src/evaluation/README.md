@@ -7,6 +7,7 @@ Before running the scripts, make sure to install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Evaluation Scripts
 ### `alpha.py`  

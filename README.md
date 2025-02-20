@@ -35,6 +35,7 @@ This repository is structured into different sections, each focusing on a specif
 
 For a detailed explanation of each section, please refer to the respective README.md files within the subdirectories. These documents provide further information.
 
+For a better code run, define this folder als main working directory for python. (except for the inference code of the models)
 ## Contact Author  
 
 For any questions regarding the code or data, please contact the author.  

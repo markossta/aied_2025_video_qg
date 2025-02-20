@@ -57,8 +57,8 @@ def process_files(file_list):
     return df_all
 
 
-person_a_files = ['video_evaluation_annotator1_teded.csv', 'video_evaluation_annotator1_khan.csv']
-person_b_files = ['video_evaluation_annotator2_teded.csv', 'video_evaluation_annotator2_khan.csv']
+person_a_files = ['/data/manual_evaluation/video_evaluation_annotator1_teded.csv', '/data/manual_evaluation/video_evaluation_annotator1_khan.csv']
+person_b_files = ['/data/manual_evaluation/video_evaluation_annotator2_teded.csv', '/data/manual_evaluation/video_evaluation_annotator2_khan.csv']
 
 
 df_a = process_files(person_a_files)

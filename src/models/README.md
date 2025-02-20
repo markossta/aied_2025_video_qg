@@ -13,9 +13,7 @@ Github-Repositories:
 
 For Mistral-7B we used the [HugginFace version](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3)
 ## Fine-Tuning  
-Fine-tuning was conducted for **PG-Video-LLaVA** and **Video-LLaMA** using the pre-processed LearningQ dataset. The original training code from the respective repositories was used for this process.
-
-For **Video-LLaMA**, additional training data was prepared to ensure compatibility with the fine-tuning process (see folder `data_processing/`).  
+Fine-tuning was conducted for **PG-Video-LLaVA** and **Video-LLaMA** using the pre-processed LearningQ dataset. The original training code from the respective repositories was used for this process (look at original repositiories). Depending of available GPUs the batch-size and learning-rate has to be adjusted (we used 1x NVIDIA H100).
 
 ## Environment Setup  
 Since the models have different dependencies, it is recommended to use a  **Conda environment** for each model to avoid conflicts.  

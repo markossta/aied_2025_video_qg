@@ -1,8 +1,8 @@
 import pandas as pd
 
 
-df_a = pd.read_csv('collaborative_evaluation_teded.csv')
-df_b = pd.read_csv('collaborative_evaluation_khan.csv')
+df_a = pd.read_csv('/data/manual_evaluation/collaborative_evaluation_teded.csv')
+df_b = pd.read_csv('/data/manual_evaluation/collaborative_evaluation_khan.csv')
 
 
 df_combined = pd.concat([df_a, df_b], axis=0).reset_index(drop=True)

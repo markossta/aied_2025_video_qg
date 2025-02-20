@@ -1,5 +1,4 @@
-
-from nltk.translate.bleu_score import sentence_bleu
+import bert_score
 from rouge_score import rouge_scorer
 import json
 import os
@@ -77,25 +76,20 @@ def calculate(khan_results, teded_results, khan_gt, teded_gt):
             question = q['question']
             for gt_o in gt_questions:
                 gt = gt_o['quiz_description']
-                bleu_teded = calculate_bleu_new(gt, question)
-                com_bleu_teded = calculate_4_cumulative_bleu(gt, question)
                 rouge_teded = calculate_rouge(scorer, gt, question)
                 bert_teded = calculate_bert(gt, question)
                 amount_teded = 1
                 gt_sentences.append(gt)
-                if "Create a question." in prompt:
+                if 'Create a question about the video content' in prompt or 'Create an additional question about the video content' in prompt:
                     bert1_sentence_teded.append(question)
                     bert1_gt_teded.append(gt)
                     rouge1_teded += rouge_teded
                     bert1_teded += bert_teded
                     amount1_teded += amount_teded
-                    bleu_1_values.append(bleu_teded)
-                    com_bleu_1_values.append(com_bleu_teded)
                     rouge_1_values.append(rouge_teded)
-                    meteor_1_values.append(meteor_teded)
                     bert1_teded += bert_teded
 
-                elif "Create a question about the video content." in prompt:
+                elif "Develop" in prompt:
                     bert2_sentence_teded.append(question)
                     bert2_gt_teded.append(gt)
                     rouge2_teded += rouge_teded
@@ -114,7 +108,7 @@ def calculate(khan_results, teded_results, khan_gt, teded_gt):
                 bert_all_teded += bert_teded
                 amount_all_teded += amount_teded 
             # calculate values on maximum basis
-            if "Create a question." in prompt:
+            if 'Create a question about the video content' in prompt or 'Create an additional question about the video content' in prompt
                 rouge1_teded += max(rouge_1_values)
                 bert1_sentence_teded.append(question)
                 bert1_gt_teded.append(gt_sentences)
@@ -122,7 +116,7 @@ def calculate(khan_results, teded_results, khan_gt, teded_gt):
 
                 rouge_all_teded += max(rouge_1_values)
                 amount_all_teded += 1
-            elif "Create a question about the video content." in prompt:
+            elif "Develop" in prompt:
                 rouge2_teded += max(rouge_2_values)
                 bert2_sentence_teded.append(question)
                 bert2_gt_teded.append(gt_sentences)
@@ -197,10 +191,7 @@ def calculate(khan_results, teded_results, khan_gt, teded_gt):
                     rouge3_khan += rouge_khan
                     bert3_khan += bert_khan
                     amount3_khan += amount_khan
-                    bleu_3_values.append(bleu_khan)
-                    com_bleu_3_values.append(com_bleu_khan)
                     rouge_3_values.append(rouge_khan)
-                    meteor_3_values.append(meteor_khan)
 
                 rouge_all_khan += rouge_khan
                 amount_all_khan += amount_khan
@@ -221,22 +212,16 @@ def calculate(khan_results, teded_results, khan_gt, teded_gt):
                 bert2_gt_khan.append(gt_sentences)
                 amount2_khan += 1
 
-                bleu_all_khan += max(bleu_2_values)
-                com_bleu_all_khan += max(com_bleu_2_values)
                 rouge_all_khan += max(rouge_2_values)
                 meteor_all_khan += max(meteor_2_values)
                 amount_all_khan += 1
             else:
-                bleu3_khan += max(bleu_3_values)
-                com_bleu3_khan += max(com_bleu_3_values)
                 rouge3_khan += max(rouge_3_values)
                 meteor3_khan += max(meteor_3_values)
                 bert3_sentence_khan.append(question)
                 bert3_gt_khan.append(gt_sentences)
                 amount3_khan += 1
 
-                bleu_all_khan += max(bleu_3_values)
-                com_bleu_all_khan += max(com_bleu_3_values)
                 rouge_all_khan += max(rouge_3_values)
                 meteor_all_khan += max(meteor_3_values)
                 amount_all_khan += 1
@@ -290,11 +275,11 @@ teded_results =json.load(open('/data/models_output/zero_shot_seed_results_full_v
 #teded_results = json.load(open('/data/models_output/patched_audio_only_new_prompts_store_finetune_seed_video_llama_13B_teded_test.txt', 'r'))
 
 # Mistral-7B (instruct version, zero-shot)
-#khan_results = json.load(open('data/models_output/patched_new_prompts_store_zeroshot_7b_results_mistral_khan_test_1234.txt', 'r'))
+#khan_results = json.load(open('/data/models_output/patched_new_prompts_store_zeroshot_7b_results_mistral_khan_test_1234.txt', 'r'))
 #teded_results = json.load(open('/data/models_output/patched_new_prompts_store_zeroshot_7b_results_mistral_teded_test_1234.txt', 'r'))  
 
 khan_gt = json.load(open('/data/learningq_questions/khan_filtered_questions.txt', 'r'))
-teded_gt = json.load(open('data/learningq_questions/teded_filtered_questions.txt', 'r'))
+teded_gt = json.load(open('/data/learningq_questions/teded_filtered_questions.txt', 'r'))
 calculate(khan_results, teded_results, khan_gt, teded_gt)
 #print("no frame")
  

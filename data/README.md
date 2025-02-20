@@ -21,5 +21,5 @@ Contains the data from the **manual evaluation** process, including:
 - **Final collaborative evaluations** (one for Khan Academy, one for TED-ED).  
 
 ## Additional Data Availability  
-If you are interested in accessing **fine-tuned models**, **cosine similarity calculations** (e.g. questions to transcripts similarity) and **model-generated outputs**, please contact the author. These files are too large to be included in this repository.  
+If you are interested in accessing **fine-tuned models** like PG-Video-LLaVA, **cosine similarity calculations** (e.g. questions to transcripts similarity) and **model-generated outputs**, please contact the author. These files are too large to be included in this repository.  
 

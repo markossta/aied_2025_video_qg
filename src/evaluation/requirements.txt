@@ -1,0 +1,7 @@
+krippendorff
+pandas
+textstat
+nltk
+numpy
+rouge_score
+cv2

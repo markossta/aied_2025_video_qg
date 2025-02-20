@@ -1,10 +1,6 @@
 
 from nltk.translate.bleu_score import sentence_bleu
-from sacrebleu.metrics import BLEU
-from bleu import list_bleu
 from rouge_score import rouge_scorer
-import bert_score
-import pymeteor.pymeteor as pymeteor
 import json
 import os
 import numpy as np
@@ -13,11 +9,6 @@ import numpy as np
 def calculate_rouge(scorer, reference, sentence):
     score = scorer.score(reference, sentence)
     return score['rougeL'].precision
-
-
-def calculate_meteor(reference, sentence):
-    score = pymeteor.meteor(reference, sentence)
-    return score
 
 def calculate_bert(reference, sentence):
     score, a, b = bert_score.score(sentence, reference, lang='en', model_type='roberta-large', rescale_with_baseline=True)

@@ -15,7 +15,7 @@ For Mistral-7B we used the [HugginFace version](https://huggingface.co/mistralai
 ## Fine-Tuning  
 Fine-tuning was conducted for **PG-Video-LLaVA** and **Video-LLaMA** using the pre-processed LearningQ dataset. The original training code from the respective repositories was used for this process.
 
-For **Video-LLaMA**, additional training data was prepared to ensure compatibility with the fine-tuning process (see folder `data_processing/').  
+For **Video-LLaMA**, additional training data was prepared to ensure compatibility with the fine-tuning process (see folder `data_processing/`).  
 
 ## Environment Setup  
 Since the models have different dependencies, it is recommended to use a  **Conda environment** for each model to avoid conflicts.  

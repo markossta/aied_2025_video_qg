@@ -1,5 +1,5 @@
-#  AIED'25 Submission #4602 - Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos
-This repository contains the manual evaluation results and code about the AIED'25 submission #4602 titled **"Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos"**.
+#  AIED'25 - Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos
+This repository contains the manual evaluation results and code about the AIED'25 paper titled **"Enhancing the Learning Experience: Using Vision-Language Models to Generate Questions for Educational Videos"**.
 
 ## Repository Structure
 - `data/`: Contains datasets, including manually annotated evaluation data and LearningQ dataset.
@@ -39,6 +39,4 @@ For a better code run, define this folder als main working directory for python.
 ## Contact Author  
 
 For any questions regarding the code or data, please contact the author.  
-
-**Note:** This repository is part of a **double-blind submission**, so the author's details cannot be shared publicly at this stage. 
 
